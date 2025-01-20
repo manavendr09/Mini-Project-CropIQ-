@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CropIQ - Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+  <link rel="stylesheet" href="styles.css"> <!-- Add your custom CSS file here -->
+</head>
+<body><nav class="navbar">
+  <div class="logo">CropIQ</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Products</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#services">Services</a></li>
+  </ul>
+  <div class="right-buttons">
+    <!-- <button class="btn cart">Cart</button> -->
+    <button class="btn login">Login</button>
+    <button class="btn signup">Sign Up</button>
+        <!-- <a class="navbar-brand" href="index.html">CropIQ</a> -->
+      <div class="d-flex align-items-center">
+        <button class="btn btn-outline-success me-2" id="cart-button" data-bs-toggle="dropdown">
+          <i class="bi bi-cart"></i> Cart <span id="cart-count">0</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cart-button">
+          <li><a class="dropdown-item" href="cart.html">View Cart</a></li>
+          <!-- <li><button class="dropdown-item" id="checkout-button">Proceed to Checkout</button></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="hero-slide" style="background-image: url('img1.jpg');">
+          <div class="overlay"></div>
+          <div class="carousel-caption text-center">
+            <h1>Welcome to CropIQ</h1>
+            <p>Empowering Farmers with Technology and Insights.<br>Join us in reshaping agriculture today.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="hero-slide" style="background-image: url('img2.jpg');">
+          <div class="overlay"></div>
+          <div class="carousel-caption text-center">
+            <h1>Grow Smarter</h1>
+            <p>Discover solutions that transform your yield.<br>Precision agriculture for the future.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="hero-slide" style="background-image: url('img3.jpg');">
+          <div class="overlay"></div>
+          <div class="carousel-caption text-center">
+            <h1>Innovate Farming</h1>
+            <p>Innovations crafted for farmers to achieve more.<br>Unlock your potential with CropIQ.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="hero-slide" style="background-image: url('img4.jpg');">
+          <div class="overlay"></div>
+          <div class="carousel-caption text-center">
+            <h1>Future of Farming</h1>
+            <p>Smart, sustainable, and scalable solutions.<br>Your trusted farming partner.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="container py-5">
+    <h2 class="text-center mb-5">Our Products</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Product 1 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p1.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pest Control</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$15</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="1" data-product-name="Product 1" data-product-img="products/p1.jpg" data-product-price="15">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for other products -->
+      <!-- Product 2 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 2</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$25</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="2" data-product-name="Product 2" data-product-img="products/p2.jpg" data-product-price="25">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat the structure for 12 products -->
+      <!-- Product 3 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p3.jpg" class="card-img-top" alt="Product 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 3</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$50</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="3" data-product-name="Product 3" data-product-img="products/p3.jpg" data-product-price="50">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p1.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 1</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$15</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="1" data-product-name="Product 1" data-product-img="products/p1.jpg" data-product-price="15">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for other products -->
+      <!-- Product 2 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 2</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$25</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="2" data-product-name="Product 2" data-product-img="products/p2.jpg" data-product-price="25">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat the structure for 12 products -->
+      <!-- Product 3 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p3.jpg" class="card-img-top" alt="Product 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 3</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$50</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="3" data-product-name="Product 3" data-product-img="products/p3.jpg" data-product-price="50">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p1.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 1</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$15</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="1" data-product-name="Product 1" data-product-img="products/p1.jpg" data-product-price="15">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for other products -->
+      <!-- Product 2 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 2</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$25</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="2" data-product-name="Product 2" data-product-img="products/p2.jpg" data-product-price="25">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat the structure for 12 products -->
+      <!-- Product 3 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p3.jpg" class="card-img-top" alt="Product 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 3</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$50</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="3" data-product-name="Product 3" data-product-img="products/p3.jpg" data-product-price="50">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p1.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 1</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$15</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="1" data-product-name="Product 1" data-product-img="products/p1.jpg" data-product-price="15">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for other products -->
+      <!-- Product 2 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 2</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$25</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="2" data-product-name="Product 2" data-product-img="products/p2.jpg" data-product-price="25">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat the structure for 12 products -->
+      <!-- Product 3 -->
+      <div class="col">
+        <div class="card product-card">
+          <img src="products/p3.jpg" class="card-img-top" alt="Product 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Product 3</h5>
+            <p class="card-text"></p>
+            <p class="product-price">$50</p>
+            <a href="#" class="btn btn-warning add-to-cart" data-product-id="3" data-product-name="Product 3" data-product-img="products/p3.jpg" data-product-price="50">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add additional product cards for the remaining 9 products -->
+      <!-- Copy and paste the above structure for products 4 through 12 -->
+    </div>
+  </div>
+
+  
+
+  <!-- Bootstrap JS and Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Function to update the cart count on the navbar
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    // Function to add product to the cart
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Get product details
+        const productId = button.getAttribute('data-product-id');
+        const productName = button.getAttribute('data-product-name');
+        const productImg = button.getAttribute('data-product-img');
+        const productPrice = button.getAttribute('data-product-price');
+
+        // Retrieve current cart from local storage or create a new array
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Add new product to the cart array
+        cart.push({ productId, productName, productImg, productPrice });
+
+        // Save the updated cart back to local storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Update cart count in the navbar
+        updateCartCount();
+      });
+    });
+
+    // Call the updateCartCount function to initialize cart count when page loads
+    window.onload = updateCartCount;
+  </script>
+</body>
+</html>
