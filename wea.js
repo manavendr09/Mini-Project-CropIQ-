@@ -1,32 +1,46 @@
-const apiKey = '2da37cfe7fd2a430436c5638b214e1d6'; // Replace with your OpenWeatherMap API key
-const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-
-document.getElementById('fetch-weather').addEventListener('click', async () => {
-    const city = document.getElementById('city-input').value.trim();
-    if (city === '') {
-        alert('Please enter a city name');
-        return;
-    }
-    const response = await fetch(`${apiUrl}?q=${city}&appid=${apiKey}&units=metric`);
-
-    try {
-        const response = await fetch(`${apiUrl}?q=${city}&appid=${apiKey}&units=metric`);
-        if (!response.ok) throw new Error('City not found');
-        const data = await response.json();
-        displayWeather(data);
-    } catch (error) {
-        document.getElementById('weather-info').innerHTML = `<p>${error.message}</p>`;
-    }
+check.addEventListener("click", () => {
+    const key = "2da37cfe7fd2a430436c5638b214e1d6";
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value},${country.value}&lang=en&units=metric&appid=${key}`;
     
-    const data = await response.json();
-    displayWeather(data);
-});
-
-function displayWeather(data) {
-    document.getElementById('weather-info').innerHTML = `
-        <h3>Weather in ${data.name}</h3>
-        <p><strong>Temperature:</strong> ${data.main.temp}°C</p>
-        <p><strong>Condition:</strong> ${data.weather[0].description}</p>
-        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="Weather Icon">
-    `;
-}
+    // Show a loading spinner or disable the button
+    check.disabled = true;
+    check.innerText = "Loading...";
+  
+    fetch(url)
+      .then(response => {
+        if (!response.ok) throw new Error("City not found");
+        return response.json();
+      })
+      .then(data => {
+        weatherCountry.innerText = `${data.name} / ${data.sys.country}`;
+        temperature.innerHTML = `${data.main.temp}°<b>C</b>`;
+        document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${data.weather[0].main}')`;
+  
+        const item = data.weather[0];
+        weatherDescription.innerText = item.description;
+  
+        // if (item.id < 250) tempIcon.src = `tempicons/storm.svg`;
+        // else if (item.id < 350) tempIcon.src = `tempicons/drizzle.svg`;
+        // else if (item.id < 550) tempIcon.src = `tempicons/snow.svg`;
+        // else if (item.id < 650) tempIcon.src = `tempicons/rain.svg`;
+        // else if (item.id < 800) tempIcon.src = `tempicons/atmosphere.svg`;
+        // else if (item.id === 800) tempIcon.src = `tempicons/sun.svg`;
+        // else if (item.id > 800) tempIcon.src = `tempicons/clouds.svg`;
+  
+        feelsLike.innerText = `Feels Like ${data.main.feels_like}°C`;
+        humidity.innerText = `Humidity ${data.main.humidity}%`;
+        latitude.innerText = `Latitude ${data.coord.lat}`;
+        longitude.innerText = `Longitude ${data.coord.lon}`;
+      })
+      .catch(error => {
+        console.error(error);
+        alert("Error: Unable to fetch data. Please check the city and country values.");
+      })
+      .finally(() => {
+        check.disabled = false;
+        check.innerText = "Check Weather";
+        country.value = "";
+        city.value = "";
+      });
+  });
+  

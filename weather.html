@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Weather Report</title>
+    <title>Weather website</title>
     <link rel="stylesheet" href="weathers.css">
+<link rel="stylesheet" href="styles.css">    
 </head>
-
 <body>
-    <header>
-        <h1>Live Weather Report</h1>
-        <p>Get accurate weather updates for your location</p>
-    </header>
-
-    <nav>
-        <a href="#weather-updates">Weather Updates</a>
-        <a href="#alerts">Weather Alerts</a>
-    </nav>
-
-    <div class="container">
-        <section id="weather-updates" class="section">
-            <h2>Live Weather Updates</h2>
-            <input type="text" id="city-input" placeholder="Enter city name">
-            <button id="fetch-weather">Get Weather</button>
-            <div id="weather-info" class="weather-card">
-                <p>Enter a city name to see the weather information.</p>
+    <nav class="navbar">
+        <div class="logo">CropIQ</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="weather.html">Weather Report</a></li>
+          <li><a href="scheme.html">Schemes</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+        <div class="right-buttons">
+          <!-- <button class="btn cart">Cart</button> -->
+          <a href="login.html"><button class="btn login">Login</button></a>
+         <a href="Signup.html"><button class="btn signup">Sign Up</button></a>
+        </div>
+      </nav>
+    <div id="container">
+        <div id="location">
+            <input type="text" id="country" placeholder="Country">
+            <input type="text" id="city" placeholder="City">
+            <input type="submit" id="check" value="Go">
+        </div>
+        <img src="weather.jpg/default.jpg" alt="" id="tempIcon">
+        <div class="flex">
+        <h2 id="weatherCountry">Cityname</h2>
+        <h2 id="temperature">0°<strong>C</strong></h2>
+        <h2 id="weatherDescription">Description</h2>
+        <ul>
+            <div class="features">
+            <li id="feelsLike">Feels Like 0°C</li>
+            <li id="humidity">Humidity 0</li>
+            <li id="longitude">Longitude 0</li>
+            <li id="latitude">Latitude 0</li>
             </div>
-        </section>
+        </ul>
+        <div class="h1">@manavendra</div>
+        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Live Weather Report. All rights reserved.</p>
-    </footer>
-
     <script src="wea.js"></script>
 </body>
-
 </html>

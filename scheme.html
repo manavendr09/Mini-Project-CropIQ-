@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Schemes for Farmers</title>
+    <style>
+
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #011202;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffd700;
+  }
+  
+  .right-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: white;
+    color: #605e0e;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #485e0d;
+    color: white;
+  }
+  
+  .cart {
+    background-color: #FF6347;
+    color: white;
+  }
+  
+  .cart:hover {
+    background-color: #d7310f;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+    }
+  
+    .navbar {
+      flex-wrap: wrap;
+    }
+  
+    .nav-links.active {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .right-buttons {
+      margin-top: 10px;
+    }
+  }
+        /* General Layout */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background-color: #009688;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Search and Button Styling */
+        .search-bar {
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #009688;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Scheme Layout */
+        .container {
+            padding: 20px;
+        }
+
+        .existing-schemes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .scheme {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .scheme:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .scheme h3 {
+            font-size: 20px;
+            color: #009688;
+        }
+
+        .scheme p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .scheme a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #009688;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Video Styling */
+        .video iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            margin-top: 10px;
+            background-image: url('https://th.bing.com/th/id/OIP.CGV5TJvMzCJ9pEP65kHraAHaE8?rs=1&pid=ImgDetMain');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .existing-schemes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .existing-schemes {
+                grid-template-columns: 1fr;
+            }
+
+            .search-bar input {
+                width: 60%;
+            }
+
+            .search-bar button {
+                width: 30%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CropIQ</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="weather.html">Weather Report</a></li>
+          <li><a href="scheme.html">Schemes</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+        <div class="right-buttons">
+          <!-- <button class="btn cart">Cart</button> -->
+          <a href="login.html"><button class="btn login">Login</button></a>
+         <a href="Signup.html"><button class="btn signup">Sign Up</button></a>
+        </div>
+      </nav>
+      
+    <header>
+        <h1>Government Schemes for Farmers</h1>
+        <p>Find detailed information and resources about the latest and existing government schemes!</p>
+    </header>
+    
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input id="searchInput" type="text" placeholder="Search for government schemes...">
+            <button onclick="searchSchemes()">Search</button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results">
+            <h2>Search Results</h2>
+            <div id="resultsContent">Enter a query to see Google search results here.</div>
+        </div>
+
+        <!-- Latest Schemes Section -->
+        <div id="latest">
+            <button class="latest-btn" onclick="fetchLatestSchemes()">Show Latest Schemes</button>
+            <br>
+            <div id="latestContent">Click the button above to view the latest government schemes to get redirected to government schemes site.</div>
+        </div>
+        <h2>Existing Government Schemes for Farmers</h2>
+
+        <!-- Existing Schemes Section -->
+        <div class="existing-schemes">
+
+            <div class="scheme">
+                <h3>National Agricultural Market (e-NAM)</h3>
+                <p><strong>Overview:</strong> Launched in April 2016, e-NAM is a pan-India electronic trading platform that connects APMC markets to create a unified agricultural market.</p>
+                <p><strong>Description:</strong> This platform helps farmers across the country get better prices for their crops by providing an online platform for sale. It aims to integrate markets across states to eliminate middlemen and ensure higher earnings for farmers. e-NAM ensures transparency and efficient price discovery. Farmers and traders can now access better prices and seamless transactions through a digital interface. The initiative strengthens agricultural marketing infrastructure, supporting millions of small farmers. It also increases market access and minimizes the logistical burden.</p>
+                <p><strong>Goal:</strong> Promotes uniformity in agricultural marketing and facilitates real-time price discovery based on demand and supply.</p>
+                <a href="https://www.enam.gov.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <!-- Corrected section for video link and button -->
+                    
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>
+                </div>
+            </div>
+            
+
+            <div class="scheme">
+                <h3>Pradhan Mantri Fasal Bima Yojana (PMFBY)</h3>
+                <p><strong>Overview:</strong> Provides crop insurance to protect farmers against crop loss due to natural calamities.</p>
+                <p><strong>Description:</strong> The PMFBY is designed to assist farmers in case of crop failure caused by floods, drought, or other adverse weather events. The government subsidizes insurance premiums under this scheme, making it more affordable for farmers. It has greatly enhanced the resilience of the agricultural sector, enabling farmers to secure their livelihood. The program also includes innovative methods such as satellite data analysis and weather-based insurance to ensure better risk management. Farmers can enroll through a variety of channels, including cooperatives and insurance agents. This program is directly aligned with the government's mission of making agriculture more sustainable.</p>
+                <p><strong>Goal:</strong> Ensures financial support for farmers in the event of crop failure due to natural disasters.</p>
+                <a href="https://pmfby.gov.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>    </div>
+            </div>
+
+            <div class="scheme">
+                <h3>Soil Health Card Scheme</h3>
+                <p><strong>Overview:</strong> Provides detailed soil health reports to farmers to promote better soil fertility management.</p>
+                <p><strong>Description:</strong> Soil Health Cards are issued to farmers to guide them in enhancing soil quality and fertility by providing detailed information about the soil's nutrient content. This helps farmers determine the right kinds of fertilizers and treatments necessary for optimal crop production. The scheme assists in promoting sustainable farming practices and decreasing excessive reliance on chemical fertilizers, which can degrade soil health in the long run. The cards also include recommendations specific to each farm’s soil, helping tailor nutrient management strategies and enhancing overall productivity.</p>
+                <p><strong>Goal:</strong> Help farmers understand the condition of their soil to boost productivity sustainably.</p>
+                <a href="https://soilhealth.dac.gov.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>     </div>
+            </div>
+
+            <div class="scheme">
+                <h3>PM Kisan Samman Nidhi</h3>
+                <p><strong>Overview:</strong> Offers direct financial assistance of ₹6,000 annually to small and marginal farmers.</p>
+                <p><strong>Description:</strong> Under this scheme, farmers receive direct income support in the form of ₹6,000 annually, distributed in three installments. It is intended to meet the financial needs of farmers to enhance their agricultural productivity. Small and marginal farmers, in particular, benefit from the assistance, providing them with much-needed financial relief, especially during lean periods such as the harvest gap. The scheme is one of the largest direct cash transfers to farmers globally, ensuring financial stability for millions of households in rural areas. The scheme reduces the reliance on loans and reduces farmer distress.</p>
+                <p><strong>Goal:</strong> Ensure financial support for farmers to help them meet their crop production costs.</p>
+                <a href="https://pmkisan.gov.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>   </div>
+            </div>
+
+            <div class="scheme">
+                <h3>Fertilizer Subsidy Scheme</h3>
+                <p><strong>Overview:</strong> The government provides subsidies to farmers on the purchase of fertilizers to ensure affordable access to vital inputs for agriculture.</p>
+                <p><strong>Description:</strong> This scheme reduces the financial burden on farmers by providing subsidies for fertilizers. It promotes the use of fertilizers to maintain soil fertility and increase crop productivity. Through this scheme, farmers are able to buy high-quality fertilizers at reduced prices, which ultimately supports better crop yield and sustains agricultural productivity across India. This initiative is especially crucial for smallholder farmers who otherwise face financial barriers to purchasing fertilizers at market prices. The scheme plays an essential role in boosting crop output.</p>
+                <p><strong>Goal:</strong> Improve crop productivity by making fertilizers more accessible and affordable to farmers.</p>
+                <a href="https://www.fert.nic.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>    </div>
+            </div>
+
+            <!-- Additional Schemes will follow here -->
+            <div class="scheme">
+                <h3>Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)</h3>
+                <p><strong>Overview:</strong> Focuses on providing irrigation infrastructure, promoting water use efficiency for farmers.</p>
+                <p><strong>Description:</strong> The PMKSY is an ambitious project aimed at providing efficient irrigation facilities to farmers, ensuring water availability in all parts of the country. This scheme seeks to enhance the productivity of agricultural lands by improving irrigation coverage and optimizing the use of available water. It includes the creation of irrigation infrastructure through a combination of funding from central and state governments. The program also promotes the use of micro-irrigation techniques like drip and sprinkler systems. By reducing dependency on monsoon rains, it helps mitigate drought-related risks and improve agricultural stability.</p>
+                <p><strong>Goal:</strong> To provide efficient and adequate irrigation to all agricultural lands, enhancing water use efficiency and reducing wastage.</p>
+                <a href="https://pmksy.gov.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>     </div>
+            </div>
+
+            <div class="scheme">
+                <h3>Swachh Bharat Abhiyan</h3>
+                <p><strong>Overview:</strong> Encourages cleanliness in rural areas, boosting agricultural sustainability and improving living conditions.</p>
+                <p><strong>Description:</strong> Under this national campaign, the government focuses on sanitation practices to encourage farmers to maintain cleaner farm environments and implement proper waste disposal mechanisms. This initiative not only helps improve farmers' health but also boosts agricultural output by preventing diseases associated with improper sanitation. It promotes the creation of toilets, waste management systems, and hygienic farming practices. Clean villages with proper infrastructure play a major role in fostering agricultural growth and sustainability. Furthermore, ensuring cleanliness reduces contamination and enhances productivity by promoting a healthier agricultural environment.</p>
+                <p><strong>Goal:</strong> Achieve cleanliness and improved sanitation in rural areas to foster agricultural productivity and better health conditions for farmers.</p>
+                <a href="https://swachhbharatmission.gov.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>    </div>
+            </div>
+
+            <div class="scheme">
+                <h3>Rashtriya Krishi Vikas Yojana (RKVY)</h3>
+                <p><strong>Overview:</strong> Focuses on improving agricultural infrastructure, enhancing the production of crops and livestock.</p>
+                <p><strong>Description:</strong> Launched in 2007-08, the RKVY aims to promote sustainable agricultural practices and build necessary infrastructure for rural areas. The scheme focuses on the development of the agricultural sector through investment in sectors like irrigation, food processing, and agro-based industries. Under RKVY, state governments receive funds to improve the existing agricultural infrastructure and expand the reach of various agricultural initiatives. It provides the necessary platform to adopt innovative practices, enhance food security, and tackle agricultural productivity issues. The scheme has played an important role in achieving a balanced development of agriculture in rural areas.</p>
+                <p><strong>Goal:</strong> Provide strategic investments into rural agriculture to drive sustainable practices and enhance overall growth in the sector.</p>
+                <a href="https://rkvy.nic.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>    </div>
+            </div>
+
+            <div class="scheme">
+                <h3>National Mission on Sustainable Agriculture (NMSA)</h3>
+                <p><strong>Overview:</strong> Promotes resource-efficient and sustainable farming practices to enhance agricultural productivity in the long run.</p>
+                <p><strong>Description:</strong> NMSA aims to enhance farm productivity, build resilience against climate change, and maintain healthy agro-ecosystems. Through this scheme, farmers are encouraged to adopt water-efficient, low-carbon practices such as organic farming, integrated farming systems (IFS), and conservation agriculture. The mission also introduces new technologies and sustainable agriculture practices that minimize environmental impact while improving productivity. In addition to supporting research and training, it assists in strengthening agro-ecosystem management with climate-smart strategies, contributing significantly to ensuring food security. Moreover, it guides farmers in adapting agriculture techniques suited to local climates and ecosystems.</p>
+                <p><strong>Goal:</strong> Promote sustainable agriculture that efficiently uses resources while enhancing food production for the future.</p>
+                <a href="https://nmsa.dac.gov.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>   </div>
+            </div>
+
+            <div class="scheme">
+                <h3>PM Gati Shakti National Master Plan</h3>
+                <p><strong>Overview:</strong> An infrastructure development project aiming at enhancing the ease of doing business for farmers by improving connectivity.</p>
+                <p><strong>Description:</strong> PM Gati Shakti Master Plan seeks to enhance supply chains and infrastructure for industries, including agriculture. With a focus on improving the transportation network, particularly for agricultural goods, it includes enhancing roads, railways, and digital connectivity. The project aims to boost connectivity, ensuring that agricultural produce reaches the markets faster and more efficiently. Through multi-modal connectivity, farmers will experience reduced transportation costs and better market access, which should in turn raise profitability and overall production quality. This scheme plays a crucial role in ensuring the success of the farm-to-market supply chains, thus benefiting both producers and consumers.</p>
+                <p><strong>Goal:</strong> Build better infrastructure to reduce the time and cost required for transporting farm produce, improving supply chains.</p>
+                <a href="https://pmgapi.gov.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>   </div>
+            </div>
+
+            <div class="scheme">
+                <h3>Atal Mission for Rejuvenation and Urban Transformation (AMRUT)</h3>
+                <p><strong>Overview:</strong> Improves urban infrastructure, including in rural-urban farming towns, to boost farming in semi-urban zones.</p>
+                <p><strong>Description:</strong> The AMRUT Mission is targeted at enhancing urban planning and infrastructure across India. While its primary focus is urban areas, it also significantly impacts rural-urban transitions and agricultural activities within urban areas. The scheme promotes eco-friendly city development with features like sewage systems, stormwater drainage systems, and wastewater treatment plants. It is aimed at building the capacities of urban regions to better handle rural-urban connections. For farmers, the focus is on enhancing the supporting infrastructure, enabling improved water management, sanitation, and resource-efficient farming in peri-urban zones. Additionally, rural farmers in towns are increasingly introduced to technological and infrastructural support.</p>
+                <p><strong>Goal:</strong> Enhance urban infrastructure that indirectly boosts sustainable farming practices within both rural and urban settings.</p>
+                <a href="http://amrut.gov.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>    </div>
+            </div>
+
+            <div class="scheme">
+                <h3>Pradhan Mantri Laghu Vyapari Maan-dhan Yojana</h3>
+                <p><strong>Overview:</strong> A pension scheme to support small traders, benefiting rural farmers and agribusinesses.</p>
+                <p><strong>Description:</strong> Although primarily focused on traders, this scheme includes small-scale farmers and rural entrepreneurs. It offers a monthly pension scheme to help increase financial security for people operating in the informal sectors. By supporting small businesses that are integral to rural economies, this scheme indirectly assists farmers who are involved in agri-trading and related activities. It benefits small traders, handicraft workers, and others linked to agriculture and agri-processing sectors, helping them prepare for a future when they are unable to work. The scheme thus ensures income security and aids entrepreneurship in rural and agricultural spaces.</p>
+                <p><strong>Goal:</strong> Provide social security to the small and informal sector traders, ensuring the agricultural economy has access to financial safety.</p>
+                <a href="https://www.pmlvy.in/" target="_blank">Official Website</a>
+                <div class="video">
+                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <a href="https://www.youtube.com/watch?v=Twl4--EiYSM&ab_channel=PIBIndia" target="_blank">
+                        <button>View</button>
+                    </a>    </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="shemesss.js"></script>
+
+</body>
+</html>
