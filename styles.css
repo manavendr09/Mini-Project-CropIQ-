@@ -53,7 +53,7 @@ General reset for consistency
     padding: 8px 12px;
     border: none;
     background-color: white;
-    color: #605e0e;
+    color: #141304;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -61,7 +61,7 @@ General reset for consistency
   
   .btn:hover {
     background-color: #485e0d;
-    color: white;
+    color: rgb(118, 63, 63);
   }
   
   .cart {
@@ -210,3 +210,117 @@ h2 {
   font-weight: bold;
   color: #28a745;
 }
+
+
+
+
+
+
+/* Section Styling */
+/* About Section Styling */
+/* About Section Styling */
+#about {
+  padding: 4rem 2rem;
+  background-color: rgba(142, 108, 208, 0.533); /* Semi-transparent background */
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 50px rgba(154, 13, 13, 0.368);
+  color: #ffffff;
+}
+
+/* Card Styling */
+.card-hover {
+  border-radius: 12px;
+  background-color: rgba(23, 24, 21, 0.548); /* Semi-transparent white */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Content */
+.card-body {
+  padding: 2.5rem 2rem;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #eae5e5;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #ebdede;
+}
+
+/* Icon Circle */
+.icon-circle-lg {
+  background-color: rgba(51, 21, 102, 0.478); 
+  background-image: url('about/logo.jpg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  padding: 20px;
+  display: inline-block;
+}
+
+.icon-circle-lg i {
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+/* Team Photos */
+.team-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(11, 12, 12, 0.86); /* Transparent border */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-photo:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: #ffd700;
+}
+
+/* Subtle Divider for Section */
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent divider */
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #about {
+    padding: 3rem 1.5rem;
+    background-size: contain;
+  }
+
+  .team-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-body {
+    padding: 2rem 1rem;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
