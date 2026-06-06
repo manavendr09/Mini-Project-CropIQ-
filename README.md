@@ -8,6 +8,8 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ---
+<img width="1830" height="742" alt="image" src="https://github.com/user-attachments/assets/bb950f21-3ea5-4a29-9abb-f4174cbdc85e" />
+
 
 ## 📖 About
 
@@ -28,9 +30,23 @@ Our mission is to enhance productivity, sustainability, and profitability for fa
 | Feature | Description |
 |---|---|
 | 🌦️ **Weather Report** | Real-time and accurate weather updates to help plan farming activities and avoid crop loss |
+<img width="1563" height="916" alt="image" src="https://github.com/user-attachments/assets/e19dc295-a23e-4282-82cb-e3df839ab55c" />
+
+| Feature | Description |
+|---|---|
 | 🛒 **Marketplace** | Connect with buyers and sellers to trade crops, seeds, and farming equipment |
+<img width="1632" height="768" alt="image" src="https://github.com/user-attachments/assets/ee9fd7c7-86d4-43fd-9994-50697e0174e1" />
+
+| Feature | Description |
+|---|---|
 | 🏛️ **Government Schemes** | Access the latest government schemes and subsidies for sustainable agriculture |
+<img width="1803" height="904" alt="image" src="https://github.com/user-attachments/assets/7b56e1dc-7bcf-4565-ba78-1be0dafb59f6" />
+
+| Feature | Description |
+|---|---|
 | 🔐 **User Auth** | Login and Sign Up pages for personalized access |
+<img width="996" height="827" alt="image" src="https://github.com/user-attachments/assets/f0ac43f5-aab1-4bae-ba66-b080f076cf13" />
+
 
 ---
 
